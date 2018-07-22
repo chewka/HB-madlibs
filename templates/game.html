@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <title>Input your values</title>
+  <style>
+  article {
+
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:400px;
+  margin: -220px 0 0 -200px;
+  text-align: left;
+
+  }
+ </style>
+</head>
+<body>
+	<article>
+	<h1>Mad Libs</h1>
+	<form action="/madlib">
+		<p>Name: <input type="text" name="name"></p>
+		<p>
+		Color: 
+		<select name="color">
+			<option name="red">Red</option>
+			<option name="yellow">Yellow</option>
+			<option name="green">Green</option>
+			<option name="blue">Blue</option>
+			<option name="maroon">Maroon</option>
+			<option name="peach">Peach</option>
+			<option name="periwinkle">Periwinkle</option>
+		</select>
+		</p>
+		<p>Noun: <input type="text" name="noun"></p>
+		<p>Adjective: <input type="text" name="adj"></p>
+		<input type="submit" value="Submit">
+	</form>
+</article>
+</body>
+</html>
