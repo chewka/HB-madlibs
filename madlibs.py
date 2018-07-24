@@ -60,11 +60,30 @@ def show_madlib():
 
     color = request.args.get('color').lower()
 
-    noun = request.args.get('noun').lower()
+    n1 = request.args.get('noun').lower()
 
     adj = request.args.get('adj').lower()
 
-    return render_template('madlibs.html', color=color, noun=noun, person=name, adjective=adj)
+
+    choice_nouns = ['bottle', 'dog', 'car', 'cat', 'table', 'peanuts', 'candy', 'kitty']
+    nouns = []
+
+    # for noun in choice_nouns:
+    #     if request.args.get(noun) == 'on':
+    #         nouns.append(noun)  
+
+
+    new_nouns = request.args.getlist('nounz')
+
+    # for i in range(len(nouns)):
+    #     random.choice(nouns, i)  
+
+    madlibs_templates = ['madlibs.html', 'madlibs1.html', 'madlibs2.html']              
+
+
+    #return render_template('madlibs.html', color=color, noun=n1, person=name, adjective=adj, nouns=nouns)
+
+    return render_template(choice(madlibs_templates), color=color, noun=n1, person=name, adjective=adj, nouns=new_nouns)
 
 if __name__ == '__main__':
     # Setting debug=True gives us error messages in the browser and also

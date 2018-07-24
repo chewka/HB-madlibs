@@ -22,13 +22,12 @@
 </head>
 <body>
 <h3>
-	There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-When {{ person }} went to pick it up, it burst into flames in a totally
-{{ adjective }} way.
+	In the jungle, the mighty jungle the {{ color }} {{ noun }} sleeps tonight.
+When the {{ person }}, the {{ adjective }} person, wakes up, they see a lion.
 
 <br><br>
 {% if nouns %}
-I went to go pick up these things from the store:
+The lion brings them:
 {% for word in nouns %}
 	<ul>
 		<li>{{ word }}</li>
@@ -36,7 +35,6 @@ I went to go pick up these things from the store:
 {% endfor %}
 
 {% endif %}
-
 
 
 </h3>
